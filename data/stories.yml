@@ -1,30 +1,117 @@
 version: "3.1"
 
 stories:
+  - story: User greets the bot
+    steps:
+      - intent: greet
+      - action: utter_greet
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: User says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: User asks for SHA overview
+    steps:
+      - intent: ask_overview
+      - action: utter_overview
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: User inquires about SHA purpose
+    steps:
+      - intent: ask_purpose_sha
+      - action: utter_purpose_sha
+
+  - story: User wants to know the registration process
+    steps:
+      - intent: ask_registration_process
+      - action: utter_registration_process
+
+  - story: User asks about SHA benefits
+    steps:
+      - intent: ask_benefits_coverage
+      - action: utter_benefits_coverage
+
+  - story: User seeks information on contribution details
+    steps:
+      - intent: ask_contribution_details
+      - action: utter_contribution_details
+
+  - story: User inquires about service access
+    steps:
+      - intent: ask_service_access
+      - action: utter_service_access
+
+  - story: User has a complaint about SHA
+    steps:
+      - intent: ask_complaints_process
+      - action: utter_complaints_process
+
+  - story: User seeks clarification between SHI and SHA
+    steps:
+      - intent: clarify_shi_vs_sha
+      - action: utter_clarify_shi_vs_sha
+
+  - story: User asks about primary health care in SHA
+    steps:
+      - intent: clarify_phc_usage
+      - action: utter_clarify_phc_usage
+
+  - story: User wants to change their contribution
+    steps:
+      - intent: inquire_contribution_changes
+      - action: utter_inquire_contribution_changes
+
+  - story: User requests financial assistance
+    steps:
+      - intent: request_financial_assistance
+      - action: utter_request_financial_assistance
+
+  - story: User wants to register dependents
+    steps:
+      - intent: ask_registration_dependents
+      - action: utter_registration_dependents
+
+  - story: User asks about employment transition
+    steps:
+      - intent: ask_employment_transition
+      - action: utter_employment_transition
+
+  - story: User seeks healthcare provider access
+    steps:
+      - intent: ask_access_healthcare_providers
+      - action: utter_access_healthcare_providers
+
+  - story: User inquires about waiting periods for services
+    steps:
+      - intent: ask_waiting_period_services
+      - action: utter_waiting_period_services
+
+  - story: User asks about special population provisions
+    steps:
+      - intent: ask_special_populations
+      - action: utter_special_populations
+
+  - story: User inquires about exceptions to contribution rules
+    steps:
+      - intent: inquire_exception_rules
+      - action: utter_inquire_exception_rules
+
+  - story: User asks about tariffs and coverage
+    steps:
+      - intent: ask_about_tariffs_and_coverage
+      - action: utter_about_tariffs_and_coverage
+
+  - story: Small talk interaction
+    steps:
+      - intent: small_talk
+      - action: utter_small_talk
+
+  - story: User asks for clarification
+    steps:
+      - intent: ask_clarification
+      - action: utter_clarification
+
+  - story: General inquiry about SHA
+    steps:
+      - intent: general_inquiry
+      - action: utter_general_inquiry

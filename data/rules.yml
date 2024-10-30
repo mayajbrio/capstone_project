@@ -1,13 +1,127 @@
 version: "3.1"
 
 rules:
+  - rule: Respond to greetings
+    steps:
+      - intent: greet
+      - action: utter_greet
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Respond to goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: Handle affirmation
+    steps:
+      - intent: affirm
+      - action: utter_affirm
+
+  - rule: Handle denial
+    steps:
+      - intent: deny
+      - action: utter_deny
+
+  - rule: Provide overview of SHA
+    steps:
+      - intent: ask_overview
+      - action: utter_overview
+
+  - rule: Provide purpose of SHA
+    steps:
+      - intent: ask_purpose_sha
+      - action: utter_purpose_sha
+
+  - rule: Provide registration process
+    steps:
+      - intent: ask_registration_process
+      - action: utter_registration_process
+
+  - rule: Provide benefits and coverage information
+    steps:
+      - intent: ask_benefits_coverage
+      - action: utter_benefits_coverage
+
+  - rule: Provide contribution details
+    steps:
+      - intent: ask_contribution_details
+      - action: utter_contribution_details
+
+  - rule: Provide service access information
+    steps:
+      - intent: ask_service_access
+      - action: utter_service_access
+
+  - rule: Handle complaints process
+    steps:
+      - intent: ask_complaints_process
+      - action: utter_complaints_process
+
+  - rule: Clarify SHI vs SHA
+    steps:
+      - intent: clarify_shi_vs_sha
+      - action: utter_clarify_shi_vs_sha
+
+  - rule: Clarify PHC usage
+    steps:
+      - intent: clarify_phc_usage
+      - action: utter_clarify_phc_usage
+
+  - rule: Inquire about contribution changes
+    steps:
+      - intent: inquire_contribution_changes
+      - action: utter_inquire_contribution_changes
+
+  - rule: Request financial assistance
+    steps:
+      - intent: request_financial_assistance
+      - action: utter_request_financial_assistance
+
+  - rule: Ask about registering dependents
+    steps:
+      - intent: ask_registration_dependents
+      - action: utter_registration_dependents
+
+  - rule: Ask about employment transitions
+    steps:
+      - intent: ask_employment_transition
+      - action: utter_employment_transition
+
+  - rule: Ask about healthcare providers
+    steps:
+      - intent: ask_access_healthcare_providers
+      - action: utter_access_healthcare_providers
+
+  - rule: Ask about waiting periods
+    steps:
+      - intent: ask_waiting_period_services
+      - action: utter_waiting_period_services
+
+  - rule: Ask about special populations
+    steps:
+      - intent: ask_special_populations
+      - action: utter_special_populations
+
+  - rule: Inquire about exceptions
+    steps:
+      - intent: inquire_exception_rules
+      - action: utter_inquire_exception_rules
+
+  - rule: Ask about tariffs and coverage
+    steps:
+      - intent: ask_about_tariffs_and_coverage
+      - action: utter_about_tariffs_and_coverage
+
+  - rule: Small talk
+    steps:
+      - intent: small_talk
+      - action: utter_small_talk
+
+  - rule: Clarification requests
+    steps:
+      - intent: ask_clarification
+      - action: utter_clarification
+
+  - rule: General inquiries
+    steps:
+      - intent: general_inquiry
+      - action: utter_general_inquiry

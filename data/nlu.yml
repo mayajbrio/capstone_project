@@ -1,91 +1,250 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - Hello
+      - Hi there
+      - Hey
+      - Good morning
+      - Good afternoon
+      - Hello there
+      - What's up?
+      - Howdy
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: goodbye
+    examples: |
+      - Goodbye
+      - See you later
+      - Bye
+      - Thank you, bye
+      - Thanks, goodbye
+      - Talk to you later
+      - Have a great day!
+      - I'm off now, see you!
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: affirm
+    examples: |
+      - Yes
+      - Sure
+      - Absolutely
+      - Of course
+      - That’s correct
+      - Right
+      - Yes, please
+      - Definitely
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: deny
+    examples: |
+      - No
+      - Not really
+      - No thanks
+      - Not at all
+      - I don’t think so
+      - No, please don't
+      - Definitely not
+      - I can't agree with that
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: ask_overview
+    examples: |
+      - Can you tell me about the SHA program?
+      - What is SHA?
+      - I’d like an overview of SHA.
+      - Explain the SHA initiative to me.
+      - Give me a summary of SHA.
+      - What does SHA stand for?
+      - How does the SHA program work?
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: ask_purpose_sha
+    examples: |
+      - What is the purpose of the SHA program?
+      - Why was SHA created?
+      - What are the goals of SHA?
+      - What does SHA aim to achieve?
+      - How does SHA benefit people?
+      - Why is SHA important?
+      - What are the main objectives of the SHA initiative?
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: ask_registration_process
+    examples: |
+      - How do I register for SHA?
+      - What’s the registration process for SHA?
+      - How can someone enroll in SHA?
+      - What steps do I need to follow to join SHA?
+      - Is there a way to sign up for SHA online?
+      - What documents are needed to register for SHA?
+      - Can I register for SHA via phone?
+
+  - intent: ask_benefits_coverage
+    examples: |
+      - What benefits are covered by SHA?
+      - Which services does SHA include?
+      - What does SHA insurance cover?
+      - Tell me about SHA health services.
+      - Can you list the SHA benefits?
+      - What types of treatments are included in SHA coverage?
+      - Are preventive services covered by SHA?
+
+  - intent: ask_contribution_details
+    examples: |
+      - What are the contribution requirements for SHA?
+      - How much do I need to pay for SHA?
+      - What are the payment options for SHA?
+      - Tell me about SHA contribution levels.
+      - Are there different contribution rates for SHA?
+      - How is the SHA contribution calculated?
+      - Can I change my contribution amount later?
+
+  - intent: ask_service_access
+    examples: |
+      - Where can I access SHA services?
+      - How do I find SHA healthcare providers?
+      - Which hospitals accept SHA?
+      - Are SHA services available everywhere?
+      - How can I locate SHA facilities?
+      - Can I use SHA services in rural areas?
+      - Are there specific locations for SHA services?
+
+  - intent: ask_complaints_process
+    examples: |
+      - How can I file a complaint with SHA?
+      - What’s the process for reporting an issue with SHA?
+      - Who can I contact if I have a problem with SHA?
+      - How do I make a complaint to SHA?
+      - Is there a way to resolve SHA issues?
+      - What should I do if I'm not satisfied with SHA services?
+      - How can I escalate a complaint regarding SHA?
+
+  - intent: clarify_shi_vs_sha
+    examples: |
+      - What’s the difference between SHI and SHA?
+      - How is SHI related to SHA?
+      - Is SHI a part of SHA?
+      - Are SHI and SHA the same thing?
+      - Explain SHI in the context of SHA.
+      - How does SHI complement the SHA program?
+      - Can you clarify the roles of SHI and SHA?
+
+  - intent: clarify_phc_usage
+    examples: |
+      - What is Primary Health Care in SHA?
+      - How does SHA handle primary healthcare?
+      - Does SHA cover community-level services?
+      - What’s the role of PHC in SHA?
+      - Can SHA be used for primary health services?
+      - How does SHA integrate PHC services?
+      - Are there specific PHC services included in SHA?
+
+  - intent: inquire_contribution_changes
+    examples: |
+      - How do I change my SHA contribution?
+      - Can I update my SHA payment level?
+      - What if I want to contribute more or less to SHA?
+      - Is it possible to adjust my SHA contributions?
+      - How can I increase or decrease my SHA contribution?
+      - Are there deadlines for changing my contribution?
+      - What happens if I miss a contribution deadline?
+
+  - intent: request_financial_assistance
+    examples: |
+      - Can I get financial help with SHA?
+      - Are there subsidies for SHA contributions?
+      - How can low-income individuals afford SHA?
+      - Does SHA offer support for those who can’t pay?
+      - Is there financial assistance under SHA?
+      - What types of financial aid are available for SHA?
+      - How can I apply for financial support with SHA?
+
+  - intent: ask_registration_dependents
+    examples: |
+      - Can I register my dependents with SHA?
+      - Does SHA cover family members?
+      - How do I add family to my SHA plan?
+      - Is it possible to enroll dependents under SHA?
+      - Can children or spouses join my SHA plan?
+      - What are the requirements for registering dependents with SHA?
+      - Are there limits on how many dependents I can register?
+
+  - intent: ask_employment_transition
+    examples: |
+      - What happens to SHA if I change jobs?
+      - Can I keep SHA after switching employers?
+      - Do I need to re-register with SHA if I change jobs?
+      - Is my SHA coverage affected by job changes?
+      - Will my SHA plan continue if I am unemployed?
+      - What should I do about my SHA plan if I lose my job?
+      - Can I transfer my SHA membership to a new employer?
+
+  - intent: ask_access_healthcare_providers
+    examples: |
+      - Where can I get healthcare with SHA?
+      - How do I know which providers accept SHA?
+      - Can I see any doctor under SHA?
+      - Is there a list of SHA hospitals?
+      - How can I find SHA-accredited healthcare providers?
+      - Are there any restrictions on healthcare providers in SHA?
+      - Can I use SHA in private hospitals?
+
+  - intent: ask_waiting_period_services
+    examples: |
+      - Is there a waiting period for SHA services?
+      - How long before I can use SHA benefits?
+      - Do I have to wait before accessing SHA?
+      - What’s the wait time for SHA coverage to start?
+      - Are there delays in SHA service availability?
+      - Can I use SHA services immediately after registration?
+      - How does the waiting period work for SHA?
+
+  - intent: ask_special_populations
+    examples: |
+      - Does SHA have special plans for vulnerable groups?
+      - Are elderly or disabled people covered differently in SHA?
+      - What provisions does SHA have for special populations?
+      - How does SHA handle coverage for low-income families?
+      - Are there any exceptions for special cases under SHA?
+      - What support does SHA provide for marginalized communities?
+      - How does SHA cater to the needs of special populations?
+
+  - intent: inquire_exception_rules
+    examples: |
+      - Are there exceptions in SHA contributions?
+      - Who qualifies for SHA exemptions?
+      - Can some people skip SHA payments?
+      - Are there waiver rules in SHA?
+      - What are the SHA contribution exceptions?
+      - How can I apply for an exception from SHA contributions?
+      - Are there special rules for certain groups in SHA?
+
+  - intent: ask_about_tariffs_and_coverage
+    examples: |
+      - What tariffs apply to SHA services?
+      - Are there cost limits in SHA?
+      - How are services priced in SHA?
+      - Can you tell me about SHA service costs?
+      - What does SHA charge for healthcare services?
+      - Are there any hidden fees with SHA?
+      - How does SHA determine its pricing structure?
+
+  - intent: small_talk
+    examples: |
+      - How are you?
+      - What’s up?
+      - Nice weather today!
+      - Tell me a joke.
+      - How’s it going?
+
+  - intent: ask_clarification
+    examples: |
+      - Can you clarify that?
+      - What do you mean by that?
+      - I don’t understand, can you explain?
+      - Could you provide more details?
+      - Can you elaborate on that?
+
+  - intent: general_inquiry
+    examples: |
+      - Can you help me with something?
+      - I have a question about SHA.
+      - What information can you provide?
+      - Can you assist me with my inquiry?
+      - I need help understanding SHA.

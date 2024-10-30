@@ -5,30 +5,88 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - ask_overview
+  - ask_purpose_sha
+  - ask_registration_process
+  - ask_benefits_coverage
+  - ask_contribution_details
+  - ask_service_access
+  - ask_complaints_process
+  - clarify_shi_vs_sha
+  - clarify_phc_usage
+  - inquire_contribution_changes
+  - request_financial_assistance
+  - ask_registration_dependents
+  - ask_employment_transition
+  - ask_access_healthcare_providers
+  - ask_waiting_period_services
+  - ask_special_populations
+  - inquire_exception_rules
+  - ask_about_tariffs_and_coverage
+  - small_talk
+  - ask_clarification
+  - general_inquiry
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+    - text: "Hello! How can I assist you today?"
   utter_goodbye:
-  - text: "Bye"
+    - text: "Goodbye! Have a great day!"
+  utter_affirm:
+    - text: "Glad to hear that!"
+  utter_deny:
+    - text: "No worries! If you have other questions, feel free to ask."
+  utter_overview:
+    - text: "The SHA program is designed to..."
+  utter_purpose_sha:
+    - text: "SHA was created to..."
+  utter_registration_process:
+    - text: "To register for SHA, you need to..."
+  utter_benefits_coverage:
+    - text: "SHA covers a variety of benefits, including..."
+  utter_contribution_details:
+    - text: "Contribution requirements for SHA include..."
+  utter_service_access:
+    - text: "You can access SHA services at..."
+  utter_complaints_process:
+    - text: "If you have a complaint, you can..."
+  utter_clarify_shi_vs_sha:
+    - text: "SHA and SHI are related in that..."
+  utter_clarify_phc_usage:
+    - text: "Primary Health Care under SHA refers to..."
+  utter_inquire_contribution_changes:
+    - text: "To change your contribution, you need to..."
+  utter_request_financial_assistance:
+    - text: "SHA offers financial assistance to those who..."
+  utter_registration_dependents:
+    - text: "You can register your dependents by..."
+  utter_employment_transition:
+    - text: "If you change jobs, your SHA coverage will..."
+  utter_access_healthcare_providers:
+    - text: "You can find SHA healthcare providers by..."
+  utter_waiting_period_services:
+    - text: "There is a waiting period of..."
+  utter_special_populations:
+    - text: "SHA provides specific plans for..."
+  utter_inquire_exception_rules:
+    - text: "There are certain exceptions in SHA, such as..."
+  utter_about_tariffs_and_coverage:
+    - text: "The tariffs for SHA services depend on..."
+  utter_small_talk:
+    - text: "I'm just a chatbot, but I'm here to help!"
+  utter_clarification:
+    - text: "I can clarify that for you. What specifically do you want to know?"
+  utter_general_inquiry:
+    - text: "I'm here to assist you with any questions about SHA."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+slots:
+  user_feedback:
+    type: categorical
+    influence_conversation: false
+    mappings:
+      - type: from_intent
+        intent: ask_feedback
+        value: true
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+actions:
+  - action_get_feedback
